@@ -36,10 +36,18 @@ main {
 .card {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 39% 61%;
+  grid-template-rows: 35% 65%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 80vh;
+}
+@media screen and (min-width: 900px) {
+  .card {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    height: 38vh;
+    width: 55vw;
+  }
 }
 
 .head {
@@ -49,6 +57,12 @@ main {
   background-repeat: no-repeat;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media screen and (min-width: 900px) {
+  .head {
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+  }
 }
 
 .content {
@@ -68,8 +82,8 @@ main {
   margin: 10px 0;
 }
 .content p {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
   font-weight: 500;
   color: hsl(214deg, 17%, 51%);
   flex-grow: 1;
@@ -89,7 +103,7 @@ main {
   margin-right: 20px;
 }
 .content .profile h2, .content .profile h3 {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 .content .profile h2 {
   font-size: 14px;
@@ -99,6 +113,93 @@ main {
   font-size: 13px;
   font-weight: 500;
   color: hsl(214deg, 17%, 51%);
+}
+.content .share {
+  margin: 8px -9px;
+  padding: 0 9px;
+  background-color: hsl(210deg, 46%, 95%);
+  border-radius: 50%;
+  background-size: 50px 50px;
+}
+.content .share:hover {
+  cursor: pointer;
+}
+.content .share-banner {
+  display: none;
+  justify-content: space-between;
+  background-color: hsl(217deg, 19%, 35%);
+  margin: 0 -25px;
+  padding: 15px 25px;
+  margin-bottom: -25px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.content .share-banner .social-network {
+  display: flex;
+  align-items: center;
+}
+.content .share-banner .social-network p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(212deg, 23%, 69%);
+  margin-right: 10px;
+}
+.content .share-banner .social-network img {
+  margin: 0 8px;
+}
+.content .share-banner .bg-share {
+  background-color: hsl(214deg, 17%, 51%);
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .share-banner .bg-share:hover {
+  cursor: pointer;
+}
+.content .share-banner .share2 {
+  filter: brightness(0) invert(1);
+}
+.content .share-banner .square {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .content {
+    grid-area: 1/2/2/3;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    position: relative;
+  }
+  .content h1 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+  .content .author {
+    margin-right: 20px;
+  }
+  .content .share-banner {
+    display: flex;
+    position: absolute;
+    bottom: 120px;
+    right: -60px;
+    padding: 15px 40px;
+    border-radius: 15px;
+  }
+  .content .share-banner .share2, .content .share-banner .bg-share {
+    display: none;
+  }
+  .content .share-banner .square {
+    height: 20px;
+    width: 20px;
+    background-color: hsl(217deg, 19%, 35%);
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 115px;
+    transform: rotate(45deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
