@@ -47,6 +47,16 @@ Users should be able to:
 
 ### What I learned
 
+Media queries in js
+
+```js
+if (window.matchMedia("(min-width: 600px)").matches) {
+  /* La largeur minimum de l'affichage est 600 px inclus */
+} else {
+  /* L'affichage est inférieur à 600px de large */
+}
+```
+
 ### Continued development
 
 ### Useful resources
